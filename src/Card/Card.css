@@ -4,10 +4,26 @@
   background-color: white;
   border-radius: $radius;
   padding: 10px 15px;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  animation: expand ease-out 0.13s;
+  animation-fill-mode: forwards;
 }
 
 .card-title {
   font-size: 14px;
   font-weight: 500;
   margin: 0;
+}
+
+@keyframes expand {
+  60% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1.07);
+  }
 }
