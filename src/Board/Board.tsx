@@ -5,12 +5,14 @@ import "./Board.css";
 
 const Board = ({}: Props) => {
   return (
-    <div>
+    <div className="board-container">
       <div>
-        <h2 className="hey">Todo</h2>
-        <div>3</div>
+        <div>
+          <h2 className="hey">Todo</h2>
+          <div>3</div>
+        </div>
+        <div></div>
       </div>
-      <div></div>
     </div>
   );
 };

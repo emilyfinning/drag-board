@@ -1,5 +1,7 @@
-$col: #000;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-.hey {
-  background-color: $col;
+$font: "Manrope";
+
+.board-container {
+  font-family: $font;
 }
