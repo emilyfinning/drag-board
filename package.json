@@ -2,9 +2,13 @@
   "name": "drag-board",
   "version": "0.0.1",
   "description": "A Kanban board library for React with Typescript support.",
-  "main": "index.js",
+  "type": "module",
+  "files": [
+    "build"
+  ],
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,20 @@
     "typescript"
   ],
   "author": "emilyfinning",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/react": "^18.2.55",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.11.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
