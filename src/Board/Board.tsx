@@ -1,6 +1,7 @@
 import React from "react";
+import { Props } from "./Board.types";
 
-const Board = () => {
+const Board = ({}: Props) => {
   return <>Hello</>;
 };
 
