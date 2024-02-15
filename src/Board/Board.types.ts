@@ -1,1 +1,9 @@
-export interface Props {}
+import { Colors } from "../types";
+
+export interface Props {
+  boards: {
+    id: string;
+    name: string;
+    colors?: Colors;
+  }[];
+}

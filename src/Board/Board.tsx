@@ -5,12 +5,14 @@ import "./Board.css";
 
 import BoardSection from "../BoardSection/BoardSection";
 
-const Board = ({}: Props) => {
+const Board = ({ boards }: Props) => {
   return (
     <div className="board-container">
-      <BoardSection title="Todo" cardCount={3}>
-        <div>HEY</div>
-      </BoardSection>
+      {boards.map((board) => (
+        <BoardSection title={board.name} cardCount={3} colors={board.colors}>
+          <div>HEY</div>
+        </BoardSection>
+      ))}
     </div>
   );
 };

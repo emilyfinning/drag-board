@@ -24,7 +24,7 @@ h2 {
 
 .board-section-card-count {
   color: #7e1616;
-  background-color: #d7aaaa;
+  /* background-color: #d7aaaa; */
   border-radius: $radius;
   padding: 1px 5px;
   font-weight: 700;

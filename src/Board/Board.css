@@ -3,4 +3,7 @@
 
 .board-container {
   font-family: $font;
+  display: flex;
+  gap: 20px;
+  width: fit-content;
 }
