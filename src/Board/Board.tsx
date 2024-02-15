@@ -10,7 +10,11 @@ const Board = ({ boards }: Props) => {
   return (
     <div className="board-container">
       {boards.map((board) => (
-        <BoardSection title={board.name} cardCount={3} colors={board.colors}>
+        <BoardSection
+          title={board.name}
+          cardCount={board.tasks.length}
+          colors={board.colors}
+        >
           {board.tasks.map((task) => (
             <Card title={task.name} />
           ))}
