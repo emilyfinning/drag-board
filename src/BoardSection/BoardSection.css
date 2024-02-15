@@ -1,10 +1,13 @@
 @import "../vars.css";
 
 .board-section-container {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.04);
   border-radius: $radius;
   width: 300px;
-  padding: 25px 30px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 h2 {
@@ -48,7 +51,7 @@ h2 {
   align-items: center;
   color: $accent;
   border-radius: $radius;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.1s ease-out;
 }
 
 .icon-button:hover {

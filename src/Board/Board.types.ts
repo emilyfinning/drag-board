@@ -5,5 +5,6 @@ export interface Props {
     id: string;
     name: string;
     colors?: Colors;
+    tasks: { id: string; name: string }[];
   }[];
 }

@@ -1,0 +1,13 @@
+@import "../vars.css";
+
+.card-container {
+  background-color: white;
+  border-radius: $radius;
+  padding: 10px 15px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
