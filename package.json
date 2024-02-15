@@ -1,0 +1,20 @@
+{
+  "name": "drag-board",
+  "version": "0.0.1",
+  "description": "A Kanban board library for React with Typescript support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emilyfinning/drag-board"
+  },
+  "keywords": [
+    "kanban",
+    "react",
+    "typescript"
+  ],
+  "author": "emilyfinning",
+  "license": "MIT"
+}
