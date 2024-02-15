@@ -58,7 +58,8 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^7.6.16"
+    "@storybook/addon-docs": "^7.6.16",
+    "autoprefixer": "^10.4.17"
   },
   "packageManager": "yarn@3.4.1"
 }

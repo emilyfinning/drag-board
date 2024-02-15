@@ -4,6 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import simpleVars from "postcss-simple-vars";
+import autoprefixer from "autoprefixer";
 
 export default {
   input: "src/index.ts",
@@ -25,7 +26,7 @@ export default {
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({
-      plugins: [simpleVars()],
+      plugins: [simpleVars(), autoprefixer()],
       extensions: [".css"],
     }),
   ],
