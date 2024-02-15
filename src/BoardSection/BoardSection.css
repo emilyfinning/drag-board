@@ -3,10 +3,54 @@
 .board-section-container {
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: $radius;
-  width: 400px;
+  width: 300px;
   padding: 25px 30px;
 }
 
 h2 {
-  margin: 0;
+  margin: 0 10px 0 0;
+}
+
+.board-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.board-section-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.board-section-card-count {
+  color: #7e1616;
+  background-color: #d7aaaa;
+  border-radius: $radius;
+  padding: 1px 5px;
+  font-weight: 700;
+}
+
+.board-section-title {
+  font-weight: 600;
+}
+
+.icon-button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $accent;
+  border-radius: $radius;
+  transition: background-color 0.15s ease;
+}
+
+.icon-button:hover {
+  background-color: $accentlight;
 }

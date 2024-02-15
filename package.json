@@ -61,7 +61,8 @@
     "@storybook/addon-docs": "^7.6.16",
     "autoprefixer": "^10.4.17",
     "postcss-easy-import": "^4.0.0",
-    "postcss-pxtorem": "^6.1.0"
+    "postcss-pxtorem": "^6.1.0",
+    "react-icons": "^5.0.1"
   },
   "packageManager": "yarn@3.4.1"
 }
