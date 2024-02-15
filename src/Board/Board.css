@@ -1,0 +1,5 @@
+$col: #000;
+
+.hey {
+  background-color: $col;
+}
