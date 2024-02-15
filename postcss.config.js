@@ -1,4 +1,9 @@
 module.exports = {
   // Add your installed PostCSS plugins here:
-  plugins: [require("postcss-simple-vars"), require("autoprefixer")],
+  plugins: [
+    require("postcss-easy-import"),
+    require("postcss-simple-vars"),
+    require("autoprefixer"),
+    require("postcss-pxtorem"),
+  ],
 };

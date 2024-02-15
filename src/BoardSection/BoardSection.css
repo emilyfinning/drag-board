@@ -1,0 +1,12 @@
+@import "../vars.css";
+
+.board-section-container {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: $radius;
+  width: 400px;
+  padding: 25px 30px;
+}
+
+h2 {
+  margin: 0;
+}

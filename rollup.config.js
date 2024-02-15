@@ -5,6 +5,8 @@ import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import simpleVars from "postcss-simple-vars";
 import autoprefixer from "autoprefixer";
+import easyImport from "postcss-easy-import";
+import pxtorem from "postcss-pxtorem";
 
 export default {
   input: "src/index.ts",
@@ -26,7 +28,12 @@ export default {
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({
-      plugins: [simpleVars(), autoprefixer()],
+      plugins: [
+        easyImport(),
+        simpleVars(),
+        autoprefixer(),
+        pxtorem({ propList: ["*"] }),
+      ],
       extensions: [".css"],
     }),
   ],

@@ -3,16 +3,14 @@ import { Props } from "./Board.types";
 
 import "./Board.css";
 
+import BoardSection from "../BoardSection/BoardSection";
+
 const Board = ({}: Props) => {
   return (
     <div className="board-container">
-      <div>
-        <div>
-          <h2 className="hey">Todo</h2>
-          <div>3</div>
-        </div>
-        <div></div>
-      </div>
+      <BoardSection title="Todo" cardCount={3}>
+        <div>HEY</div>
+      </BoardSection>
     </div>
   );
 };
