@@ -13,11 +13,27 @@ const dragStyle = (top: number, left: number, width: string) =>
     zIndex: 100,
   } as React.CSSProperties);
 
-const Card = ({ title, description, tags }: Props) => {
+const Card = ({
+  title,
+  description,
+  tags,
+  addPlaceholder,
+  removePlaceholder,
+}: Props) => {
   const [isDragging, setIsDragging] = useState(false);
   const [cardWidth, setCardWidth] = useState("0px");
   const card = useRef<HTMLDivElement>();
   const mousePosition = useMousePosition();
+
+  const handleMouseDown = () => {
+    addPlaceholder(card.current.clientHeight);
+    setIsDragging(true);
+  };
+
+  const handleMouseUp = () => {
+    removePlaceholder();
+    setIsDragging(false);
+  };
 
   useEffect(() => {
     if (cardWidth === "0px") {
@@ -27,8 +43,8 @@ const Card = ({ title, description, tags }: Props) => {
 
   return (
     <div
-      onMouseDown={() => setIsDragging(true)}
-      onMouseUp={() => setIsDragging(false)}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
       className="card-container"
       aria-role="button"
       style={

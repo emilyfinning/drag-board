@@ -7,3 +7,11 @@
   gap: 20px;
   width: fit-content;
 }
+
+.placeholder {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: $radius;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  margin-top: 11px;
+}
