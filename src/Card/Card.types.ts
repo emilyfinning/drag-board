@@ -1,3 +1,4 @@
+import { MutableRefObject } from "react";
 import { Tag } from "../types";
 
 export interface Props {
@@ -6,4 +7,5 @@ export interface Props {
   tags: Tag[];
   addPlaceholder: (height: number) => void;
   removePlaceholder: () => void;
+  boardRef: MutableRefObject<HTMLDivElement>;
 }

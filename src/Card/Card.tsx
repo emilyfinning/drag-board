@@ -19,9 +19,12 @@ const Card = ({
   tags,
   addPlaceholder,
   removePlaceholder,
+  boardRef,
 }: Props) => {
   const [isDragging, setIsDragging] = useState(false);
   const [cardWidth, setCardWidth] = useState("0px");
+  const [cardOffsetX, setCardOffsetX] = useState(0);
+  const [cardOffsetY, setCardOffsetY] = useState(0);
   const card = useRef<HTMLDivElement>();
   const mousePosition = useMousePosition();
 
@@ -38,6 +41,8 @@ const Card = ({
   useEffect(() => {
     if (cardWidth === "0px") {
       setCardWidth(`${card.current.clientWidth}px`);
+      setCardOffsetX(boardRef.current.getBoundingClientRect().left + 150);
+      setCardOffsetY(boardRef.current.getBoundingClientRect().top + 40);
     }
   }, [card.current]);
 
@@ -49,7 +54,11 @@ const Card = ({
       aria-role="button"
       style={
         isDragging
-          ? dragStyle(mousePosition.y - 250, mousePosition.x - 225, cardWidth)
+          ? dragStyle(
+              mousePosition.y - cardOffsetY,
+              mousePosition.x - cardOffsetX,
+              cardWidth,
+            )
           : {}
       }
       ref={card}

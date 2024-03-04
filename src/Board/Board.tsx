@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Props } from "./Board.types";
 
 import "./Board.css";
@@ -12,6 +12,7 @@ const Board = ({ boards }: Props) => {
     task: null as number | null,
     height: "0px",
   });
+  const boardRef = useRef<HTMLDivElement>();
 
   const addPlaceholder = (boardIndex, taskIndex, height) => {
     setPlaceholder({ board: boardIndex, task: taskIndex, height: height });
@@ -22,7 +23,7 @@ const Board = ({ boards }: Props) => {
   };
 
   return (
-    <div className="board-container">
+    <div className="board-container" ref={boardRef}>
       {boards.map((board, bi) => (
         <BoardSection
           title={board.name}
@@ -45,6 +46,7 @@ const Board = ({ boards }: Props) => {
                 tags={task.tags}
                 addPlaceholder={(height) => addPlaceholder(bi, ti, height)}
                 removePlaceholder={removePlaceholder}
+                boardRef={boardRef}
               />
             </>
           ))}
