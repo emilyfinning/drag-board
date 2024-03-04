@@ -16,7 +16,11 @@ const Board = ({ boards }: Props) => {
           colors={board.colors}
         >
           {board.tasks.map((task) => (
-            <Card title={task.name} description={task.description} />
+            <Card
+              title={task.name}
+              description={task.description}
+              tags={task.tags}
+            />
           ))}
         </BoardSection>
       ))}

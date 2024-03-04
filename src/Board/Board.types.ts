@@ -1,10 +1,12 @@
-import { Colors } from "../types";
+import { Colors, Tag } from "../types";
 
 export interface Props {
   boards: {
     id: string;
     name: string;
     colors?: Colors;
-    tasks: { id: string; name: string; description: string }[];
+    tasks: Task[];
   }[];
 }
+
+type Task = { id: string; name: string; description: string; tags: Tag[] };

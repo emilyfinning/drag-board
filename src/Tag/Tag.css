@@ -1,0 +1,18 @@
+@import "../vars.css";
+
+.tag-container {
+  background-color: $backgroundGrey;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}

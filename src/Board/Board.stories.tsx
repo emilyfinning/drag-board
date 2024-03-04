@@ -25,12 +25,17 @@ export const Main: Story = {
           {
             id: "1",
             name: "Upgrade to version 1.3.5",
+            tags: [
+              { name: "design", color: "#ff6347" },
+              { name: "research", color: "#4682b4" },
+            ],
             description:
               "The task 'Upgrade to version 1.3.5' involves updating the software or system to the specified version 1.3.5, which likely includes implementing new features, bug fixes, and performance enhancements provided in that version. This process typically requires careful planning, testing, and deployment to ensure a smooth transition and improved functionality.",
           },
           {
             id: "2",
             name: "Scope out new feature",
+            tags: [],
             description:
               "The task 'Scope out new feature' involves defining the parameters, requirements, and potential implications of implementing a specific addition or enhancement to a software, product, or service. This process typically includes conducting research, gathering user feedback, and collaborating with stakeholders to outline the feature's objectives, functionality, and anticipated impact on the overall project.",
           },
@@ -44,6 +49,7 @@ export const Main: Story = {
           {
             id: "1",
             name: "Meet with product team",
+            tags: [{ name: "development", color: "#32cd32" }],
             description:
               "The task 'meet with the product team' entails organizing a collaborative session where members discuss various aspects of the product's development, including upcoming features, user feedback, and strategic planning. During the meeting, participants share insights, align priorities, and make decisions to steer the product's direction effectively, fostering communication and synergy among team members to drive innovation and success.",
           },
@@ -57,18 +63,31 @@ export const Main: Story = {
           {
             id: "1",
             name: "Write up documentation",
+            tags: [
+              { name: "marketing", color: "#ff69b4" },
+              { name: "analysis", color: "#7b68ee" },
+              { name: "testing", color: "#f08080" },
+            ],
             description:
               "The task 'Write up documentation' involves creating comprehensive and accessible documents that detail various aspects of a project, process, or product. This documentation typically includes instructions, guidelines, specifications, and other relevant information to aid users, stakeholders, or team members in understanding and utilizing the resources effectively. The aim is to provide clear and concise documentation to facilitate smooth implementation, troubleshooting, and maintenance of the subject matter.",
           },
           {
             id: "1",
             name: "Remove package vulnerabilities",
+            tags: [
+              { name: "planning", color: "#6a5acd" },
+              { name: "writing", color: "#ffa500" },
+            ],
             description:
               "The task 'Remove package vulnerabilities' entails identifying and addressing security vulnerabilities present within software packages or dependencies. This involves conducting thorough vulnerability assessments, updating or removing affected packages, and implementing necessary security patches or fixes to mitigate potential risks. The goal is to enhance the overall security posture of the software ecosystem and protect against potential exploits or breaches.",
           },
           {
             id: "1",
             name: "Create new marketing content",
+            tags: [
+              { name: "administration", color: "#20b2aa" },
+              { name: "maintenance", color: "#9370db" },
+            ],
             description:
               "The task 'Create new marketing content' involves developing fresh and engaging materials to promote products, services, or brands across various channels. This includes crafting compelling copy, designing eye-catching visuals, and formulating strategic messaging to resonate with target audiences. The goal is to attract and retain customers, drive engagement, and ultimately contribute to the overall marketing objectives and business growth.",
           },

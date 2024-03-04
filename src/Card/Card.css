@@ -29,6 +29,12 @@
   -webkit-box-orient: vertical;
 }
 
+.card-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
 @keyframes expand {
   60% {
     transform: scale(1.1);
