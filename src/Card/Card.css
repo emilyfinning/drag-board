@@ -16,6 +16,7 @@
   font-size: 16px;
   font-weight: 600;
   margin: 0;
+  user-select: none;
 }
 
 .card-description {
@@ -27,12 +28,14 @@
   -webkit-line-clamp: 4;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+  user-select: none;
 }
 
 .card-tags {
   display: flex;
   gap: 8px;
   margin-top: 20px;
+  user-select: none;
 }
 
 @keyframes expand {
