@@ -13,17 +13,28 @@
 }
 
 .card-title {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   margin: 0;
+}
+
+.card-description {
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 @keyframes expand {
   60% {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 
   100% {
-    transform: scale(1.07);
+    transform: scale(1.02);
   }
 }
