@@ -6,10 +6,11 @@ import { useMousePosition } from "../hooks";
 
 const dragStyle = (top: number, left: number, width: string) =>
   ({
-    position: "absolute",
+    position: "fixed",
     top: top,
     left: left,
     width: width,
+    zIndex: 100,
   } as React.CSSProperties);
 
 const Card = ({ title, description, tags }: Props) => {
@@ -19,7 +20,9 @@ const Card = ({ title, description, tags }: Props) => {
   const mousePosition = useMousePosition();
 
   useEffect(() => {
-    setCardWidth(`${card.current.clientWidth}px`);
+    if (cardWidth === "0px") {
+      setCardWidth(`${card.current.clientWidth}px`);
+    }
   }, [card.current]);
 
   return (
@@ -29,7 +32,9 @@ const Card = ({ title, description, tags }: Props) => {
       className="card-container"
       aria-role="button"
       style={
-        isDragging ? dragStyle(mousePosition.y, mousePosition.x, cardWidth) : {}
+        isDragging
+          ? dragStyle(mousePosition.y - 250, mousePosition.x - 225, cardWidth)
+          : {}
       }
       ref={card}
     >

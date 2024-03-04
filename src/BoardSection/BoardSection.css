@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 15px;
   height: fit-content;
+  position: relative;
 }
 
 h2 {
