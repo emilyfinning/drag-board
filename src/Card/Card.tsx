@@ -34,7 +34,7 @@ const Card = ({
   const mousePosition = useMousePosition();
 
   const handleMouseDown = () => {
-    addPlaceholder(card.current.clientHeight);
+    addPlaceholder(card.current.clientHeight - 4);
     setIsDragging(true);
     setDraggingCard(id);
   };
@@ -64,7 +64,7 @@ const Card = ({
           mousePosition.y < upperCard &&
           mousePosition.y > cardRect.top - 50
         ) {
-          addInsertPlaceholder(cardRect.height);
+          addInsertPlaceholder(cardRect.height - 4);
         }
       } else {
         removeInsertPlaceholder();

@@ -6,6 +6,7 @@
   display: flex;
   gap: 20px;
   width: fit-content;
+  box-sizing: border-box;
 }
 
 .placeholder {
@@ -13,7 +14,6 @@
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: $radius;
   border: 2px dashed rgba(0, 0, 0, 0.2);
-  margin-top: 11px;
 }
 
 .insert-placeholder {
@@ -21,5 +21,4 @@
   background-color: $accentlight;
   border-radius: $radius;
   border: 2px dashed $accent;
-  margin-top: 11px;
 }

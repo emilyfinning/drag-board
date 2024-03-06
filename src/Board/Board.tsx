@@ -59,7 +59,7 @@ const Board = ({ boards }: Props) => {
                   style={{ height: placeholder.height }}
                 />
               ) : (
-                <div />
+                <></>
               )}
               {ti === insertPlaceholder.task &&
               bi === insertPlaceholder.board ? (
@@ -68,7 +68,7 @@ const Board = ({ boards }: Props) => {
                   style={{ height: insertPlaceholder.height }}
                 />
               ) : (
-                <div />
+                <></>
               )}
               <Card
                 id={task.id}
