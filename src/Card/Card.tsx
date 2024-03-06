@@ -11,6 +11,8 @@ const dragStyle = (top: number, left: number, width: string) =>
     left: left,
     width: width,
     zIndex: 100,
+    animation: "tilt ease-out 0.05s",
+    animationFillMode: "forwards",
   } as React.CSSProperties);
 
 const Card = ({
