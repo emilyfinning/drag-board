@@ -47,7 +47,7 @@ export const Main: Story = {
         colors: { main: "#EF6C00", light: "#FAD6B8" },
         tasks: [
           {
-            id: "1",
+            id: "3",
             name: "Meet with product team",
             tags: [{ name: "development", color: "#32cd32" }],
             description:
@@ -56,12 +56,12 @@ export const Main: Story = {
         ],
       },
       {
-        id: "todo",
+        id: "complete",
         name: "Complete",
         colors: { main: "#558B2F", light: "#D4E1CB" },
         tasks: [
           {
-            id: "1",
+            id: "4",
             name: "Write up documentation",
             tags: [
               { name: "marketing", color: "#ff69b4" },
@@ -72,7 +72,7 @@ export const Main: Story = {
               "The task 'Write up documentation' involves creating comprehensive and accessible documents that detail various aspects of a project, process, or product. This documentation typically includes instructions, guidelines, specifications, and other relevant information to aid users, stakeholders, or team members in understanding and utilizing the resources effectively. The aim is to provide clear and concise documentation to facilitate smooth implementation, troubleshooting, and maintenance of the subject matter.",
           },
           {
-            id: "1",
+            id: "5",
             name: "Remove package vulnerabilities",
             tags: [
               { name: "planning", color: "#6a5acd" },
@@ -82,7 +82,7 @@ export const Main: Story = {
               "The task 'Remove package vulnerabilities' entails identifying and addressing security vulnerabilities present within software packages or dependencies. This involves conducting thorough vulnerability assessments, updating or removing affected packages, and implementing necessary security patches or fixes to mitigate potential risks. The goal is to enhance the overall security posture of the software ecosystem and protect against potential exploits or breaches.",
           },
           {
-            id: "1",
+            id: "6",
             name: "Create new marketing content",
             tags: [
               { name: "administration", color: "#20b2aa" },

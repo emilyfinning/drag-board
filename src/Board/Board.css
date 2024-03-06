@@ -15,3 +15,11 @@
   border: 2px dashed rgba(0, 0, 0, 0.2);
   margin-top: 11px;
 }
+
+.insert-placeholder {
+  width: 100%;
+  background-color: $accentlight;
+  border-radius: $radius;
+  border: 2px dashed $accent;
+  margin-top: 11px;
+}

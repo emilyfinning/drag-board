@@ -14,11 +14,16 @@ const dragStyle = (top: number, left: number, width: string) =>
   } as React.CSSProperties);
 
 const Card = ({
+  id,
   title,
   description,
   tags,
   addPlaceholder,
   removePlaceholder,
+  addInsertPlaceholder,
+  removeInsertPlaceholder,
+  draggingCard,
+  setDraggingCard,
   boardRef,
 }: Props) => {
   const [isDragging, setIsDragging] = useState(false);
@@ -31,20 +36,41 @@ const Card = ({
   const handleMouseDown = () => {
     addPlaceholder(card.current.clientHeight);
     setIsDragging(true);
+    setDraggingCard(id);
   };
 
   const handleMouseUp = () => {
     removePlaceholder();
     setIsDragging(false);
+    setDraggingCard(null);
   };
 
   useEffect(() => {
-    if (cardWidth === "0px") {
+    if (card.current && cardWidth === "0px") {
       setCardWidth(`${card.current.clientWidth}px`);
+      const cardRect = card.current.getBoundingClientRect();
     }
-    setCardOffsetX(boardRef.current.getBoundingClientRect().left + 150);
-    setCardOffsetY(boardRef.current.getBoundingClientRect().top + 40);
+    const boardRect = boardRef.current.getBoundingClientRect();
+    setCardOffsetX(boardRect.left + 150);
+    setCardOffsetY(boardRect.top + 40);
   }, [card.current?.clientWidth, boardRef.current?.getBoundingClientRect()]);
+
+  useEffect(() => {
+    if (draggingCard && draggingCard !== id) {
+      const cardRect = card.current.getBoundingClientRect();
+      if (mousePosition.x > cardRect.left && mousePosition.x < cardRect.right) {
+        const upperCard = cardRect.y + (1 / 3) * cardRect.height;
+        if (
+          mousePosition.y < upperCard &&
+          mousePosition.y > cardRect.top - 50
+        ) {
+          addInsertPlaceholder(cardRect.height);
+        }
+      } else {
+        removeInsertPlaceholder();
+      }
+    }
+  }, [mousePosition]);
 
   return (
     <div
