@@ -41,10 +41,10 @@ const Card = ({
   useEffect(() => {
     if (cardWidth === "0px") {
       setCardWidth(`${card.current.clientWidth}px`);
-      setCardOffsetX(boardRef.current.getBoundingClientRect().left + 150);
-      setCardOffsetY(boardRef.current.getBoundingClientRect().top + 40);
     }
-  }, [card.current]);
+    setCardOffsetX(boardRef.current.getBoundingClientRect().left + 150);
+    setCardOffsetY(boardRef.current.getBoundingClientRect().top + 40);
+  }, [card.current?.clientWidth, boardRef.current?.getBoundingClientRect()]);
 
   return (
     <div
